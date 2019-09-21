@@ -1,8 +1,16 @@
 {% extends 'base.html' %}
 {% block content %}
+    <div class="text-center mt-5" xmlns="http://www.w3.org/1999/html">
+        <form action="{% url 'main_url' %}" method="post">
+            {% csrf_token %}
+            {{ form }}
+            <button type="submit" class="btn btn-outline-info">Поиск</button>
+        </form>
+    </div>
     <form action="{% url 'main_url' %}" method="post">
         {% csrf_token %}
         <div class="container mt-5">
+
             <div class="row">
                 {% for i in records %}
                     <div class="col-sm-4 my-2">
@@ -13,16 +21,16 @@
                                     <hr>
                                     <p class="card-text">{{ i.details }}</p>
                                     <hr>
-{#                                    {% for j in choices %}#}
-{#                                        {% if i.status in j %}#}
-{#                                            <p class="card-text">Статус: {{ j.1 }}</p>#}
-{#                                        {% endif %}#}
-{#                                    {% endfor %}#}
-{#                                    {% if i.date %}#}
-{#                                        <p>{{ i.date }}</p>#}
-{#                                    {% else %}#}
-{#                                        <p>Без срока</p>#}
-{#                                    {% endif %}#}
+                                    {#                                    {% for j in choices %}#}
+                                    {#                                        {% if i.status in j %}#}
+                                    {#                                            <p class="card-text">Статус: {{ j.1 }}</p>#}
+                                    {#                                        {% endif %}#}
+                                    {#                                    {% endfor %}#}
+                                    {#                                    {% if i.date %}#}
+                                    {#                                        <p>{{ i.date }}</p>#}
+                                    {#                                    {% else %}#}
+                                    {#                                        <p>Без срока</p>#}
+                                    {#                                    {% endif %}#}
                                     <a href="{% url 'record_edit_url' i.pk %}" class="btn btn-success">Изменить</a>
                                     <a href="{% url 'record_delete_url' i.pk %}" class="btn btn-danger">Удалить</a>
                                 </div>

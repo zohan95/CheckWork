@@ -1,8 +1,8 @@
 {% extends 'base.html' %}
 {% block content %}
-<div class="container mt-5">
-    <form action="{% url 'record_edit_url' pk=pk1 %}" method="post">
-    {% include 'partial/record_create_form.html' with button_text='Изменить' %}
-    </form>
-</div>
+    <div class="container mt-5">
+        <form action="{% url 'record_edit_url' pk=pk1 %}" method="post">
+            {% include 'partial/record_create_form.html' with button_text='Изменить' %}
+        </form>
+    </div>
 {% endblock %}
