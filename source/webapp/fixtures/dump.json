@@ -1,0 +1,80 @@
+[
+{
+  "model": "webapp.book",
+  "pk": 1,
+  "fields": {
+    "author": "author1",
+    "mail": "author1@mail.ru",
+    "details": "some text",
+    "status": "active",
+    "date_create": "2019-09-21T06:09:38.535Z",
+    "date_change": "2019-09-21T06:09:38.535Z"
+  }
+},
+{
+  "model": "webapp.book",
+  "pk": 2,
+  "fields": {
+    "author": "author2",
+    "mail": "author2@mail.ru",
+    "details": "author2 text",
+    "status": "active",
+    "date_create": "2019-09-21T06:09:58.644Z",
+    "date_change": "2019-09-21T06:09:58.644Z"
+  }
+},
+{
+  "model": "webapp.book",
+  "pk": 3,
+  "fields": {
+    "author": "author3",
+    "mail": "author3@mail.ru",
+    "details": "author 3 text",
+    "status": "blocked",
+    "date_create": "2019-09-21T06:10:37.613Z",
+    "date_change": "2019-09-21T06:10:37.613Z"
+  }
+},
+{
+  "model": "webapp.book",
+  "pk": 4,
+  "fields": {
+    "author": "author4",
+    "mail": "author4@mail.ru",
+    "details": "author 4 text",
+    "status": "blocked",
+    "date_create": "2019-09-21T06:11:03.951Z",
+    "date_change": "2019-09-21T06:11:03.951Z"
+  }
+},
+{
+  "model": "webapp.book",
+  "pk": 5,
+  "fields": {
+    "author": "author5",
+    "mail": "author5@mail.ru",
+    "details": "author  5 text",
+    "status": "active",
+    "date_create": "2019-09-21T06:11:20.976Z",
+    "date_change": "2019-09-21T06:11:20.976Z"
+  }
+},
+{
+  "model": "auth.user",
+  "pk": 1,
+  "fields": {
+    "password": "pbkdf2_sha256$150000$kEaCKeWE5xPd$UWng7YvsLAN0618tAucBkQR5GMST7mxppjTvsznhaMs=",
+    "last_login": "2019-09-21T06:09:14.701Z",
+    "is_superuser": true,
+    "username": "root",
+    "first_name": "",
+    "last_name": "",
+    "email": "asd@sd.sd",
+    "is_staff": true,
+    "is_active": true,
+    "date_joined": "2019-09-21T05:46:01.816Z",
+    "groups": [],
+    "user_permissions": []
+  }
+}
+]
