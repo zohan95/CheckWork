@@ -1,0 +1,41 @@
+{% extends 'base.html' %}
+{% block content %}
+    <form action="{% url 'main_url' %}" method="post">
+        {% csrf_token %}
+        <div class="container mt-5">
+            <div class="row">
+                {% for i in titles %}
+                    <div class="col-sm-4 my-2">
+                        <div class="card card-1 ">
+                            <div id="question_text_{{ i.pk }}">
+                                <div class="card-body">
+                                    <p class="card-text">{{ i.author }} ({{ i.mail }})</p>
+                                    <hr>
+                                    <p class="card-text">{{ i.details }}</p>
+                                    <hr>
+{#                                    {% for j in choices %}#}
+{#                                        {% if i.status in j %}#}
+{#                                            <p class="card-text">Статус: {{ j.1 }}</p>#}
+{#                                        {% endif %}#}
+{#                                    {% endfor %}#}
+{#                                    {% if i.date %}#}
+{#                                        <p>{{ i.date }}</p>#}
+{#                                    {% else %}#}
+{#                                        <p>Без срока</p>#}
+{#                                    {% endif %}#}
+                                    <a href="" class="btn btn-success">Edit</a>
+                                    <a href="" class="btn btn-danger">Delete</a>
+                                </div>
+
+                            </div>
+                        </div>
+                    </div>
+
+                {% endfor %}
+            </div>
+        </div>
+        <div class="plus-button">
+            <a href="" class="text-decoration-none">+</a>
+        </div>
+    </form>
+{% endblock %}
