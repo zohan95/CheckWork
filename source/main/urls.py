@@ -20,5 +20,6 @@ from webapp.views import *
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('', main_page, name='main_url')
+    path('', main_page, name='main_url'),
+    path('create/', record_create, name='record_create_url')
 ]
