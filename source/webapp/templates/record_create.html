@@ -2,7 +2,7 @@
 {% block content %}
 <div class="container mt-5">
     <form action="{% url 'record_create_url' %}" method="post">
-    {% include 'partial/title_create_form.html' with button_text='Создать' %}
+    {% include 'partial/record_create_form.html' with button_text='Создать' %}
     </form>
 </div>
 {% endblock %}
